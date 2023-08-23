@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { setCanTryTruthQuestion } from "../stores/CanTryTruthQuestion";
 
 const ANSWERS = {
-  no1: "あれ",
-  no2: "それ",
-  no3: "こう",
+  no1: "町役場の人",
+  no2: "村人全員の申請状況",
+  no3: "可視化できる",
 }
 
 const AnswerField = ({ fieldName, onChange }) => {
