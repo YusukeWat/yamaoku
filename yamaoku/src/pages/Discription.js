@@ -1,33 +1,11 @@
 import React from "react";
-import { Paper, Typography, Box } from "@mui/material";
+import { Paper, Typography } from "@mui/material";
+import BalloonMessage from "../components/BalloonMessage";
 import villagerImage from "../images/villager.png";
 import villageImage from "../images/village.png";
 import lectureImage from "../images/lecture.png";
 
-const BalloonMessage = ({ imageUrl, message, altMessage }) => {
-  return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <img src={imageUrl} alt={altMessage} style={{ width: '200px', height: '300px', borderRadius: '50%' }} />
-      <Paper sx={{ p: 2, marginLeft: 2, maxWidth: '400px', borderRadius: '10px', position: 'relative' }}>
-        <Typography>{message}</Typography>
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-10px',
-            left: '10px',
-            width: '0',
-            height: '0',
-            borderTop: '10px solid transparent',
-            borderRight: '10px solid white',
-            borderBottom: '10px solid transparent',
-          }}
-        />
-      </Paper>
-    </Box>
-  );
-};
-
-const Discription = () => {
+const DiscriptionPage = () => {
   return (
     <Paper elevation={3} sx={{ padding: 2 }}>
       <Typography variant="body1">
@@ -66,4 +44,4 @@ const Discription = () => {
   );
 };
 
-export default Discription;
+export default DiscriptionPage;
