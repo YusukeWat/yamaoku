@@ -37,7 +37,7 @@ const AnswerPage = () => {
   const [feedback, setFeedback] = useState("");
 
   const handleSubmit = () => {
-    if (checkAnswer()) {
+    if (checkAnswer(true)) {
       setCanTryTruthQuestion(true);
       setFeedback("正解……？");
     } else {
