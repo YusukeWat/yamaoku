@@ -37,12 +37,22 @@ const AnswerPage = () => {
   const [feedback, setFeedback] = useState("");
 
   const handleSubmit = () => {
-    if (input1 === ANSWERS.no1 && input2 === ANSWERS.no2 && input3 === ANSWERS.no3) {
+    if (checkAnswer()) {
       setCanTryTruthQuestion(true);
       setFeedback("正解……？");
     } else {
       setFeedback("不正解。。");
     }
+  }
+
+  const checkAnswer = (isDemo) => {
+    if (isDemo) {
+      return input1 === ANSWERS.no1 && input3 === ANSWERS.no3;
+    }
+
+    return input1 === ANSWERS.no1 
+        && input2 === ANSWERS.no2 
+        && input3 === ANSWERS.no3;
   }
 
   return (
@@ -66,7 +76,7 @@ const AnswerPage = () => {
           <Button variant="contained" onClick={handleSubmit}>回答する</Button>
         </Grid>
         <Grid item xs={16}>
-          {feedback && <Typography variant="h5">{feedback}</Typography>}
+          {feedback && <Typography variant="h5" color="red">{feedback}</Typography>}
         </Grid>
       </Grid>
     </Container>
