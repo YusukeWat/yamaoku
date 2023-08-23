@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const STORED_KEY = "canTryTruthQuestion";
 
 export const canTryTruthQuestion = () => {

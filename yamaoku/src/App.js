@@ -6,10 +6,8 @@ import Sidebar from "./components/Sidebar";
 import DiscriptionPage from "./pages/Discription";
 import AnswerPage from "./pages/Answer";
 import TruthAnswerPage from "./pages/TruthAnswer";
-import { setCanTryTruthQuestion } from "./stores/CanTryTruthQuestion";
 
 const App = () => {
-  setCanTryTruthQuestion(false);
   return (
     <Router>
       <CssBaseline />

@@ -3,8 +3,6 @@ import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import { canTryTruthQuestion } from "../stores/CanTryTruthQuestion";
 
-const _canTryTruthQuestion = false;
-
 const Sidebar = () => {
   return (
     <Drawer variant="permanent">
